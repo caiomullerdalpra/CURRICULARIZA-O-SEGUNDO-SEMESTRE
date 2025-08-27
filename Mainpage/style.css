@@ -17,20 +17,17 @@ body {
 .top-bar {
   background-color: #7c5eb3;
   color: white;
-  padding: 15px 20px;
+  padding:20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.left, .center, .right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 
 .center img {
-  height: 80px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
 }
 
 .right input {
