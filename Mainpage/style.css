@@ -225,3 +225,19 @@ footer img {
 .card .texto p {
   line-height: 1.4;
 }
+
+/* ---------------------------------------------------------------------------------------------- */
+/*contato*/
+
+
+.titulo-principal h2 {
+  color: #7c5eb3;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.titulo-principal h3 {
+  color: #7c5eb3;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
