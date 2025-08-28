@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pix</title>
+</head>
+<body>
+    <img class="pix" src="assets/pix.png" alt="pix">
+    <style>
+        .pix {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .btn-abrir {
+            background-color: #7c5eb3;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .btn-abrir:hover {
+            background-color: #9b7bc8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+    </style>
+    
+</body>
+</html>
