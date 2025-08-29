@@ -38,56 +38,58 @@
   </div>
 </header>
 
+
   <!-- Conteúdo principal -->
   <main>
     <!-- Título principal -->
     <div class="titulo-principal">
-      <h1>Estatísticas</h1>
+      <h1>Estatísticas de Adoção</h1>
     </div>
   </main>
 
 
     <!-- .............................................................................-->
 
-       <div class="conteudo">
-    <br>
-      
-    <h1>ACAPRA Brusque - Estatísticas de Adoção</h1>
-    <br><br>
+<section>
+  <h2>Dados Adicionais do Ano</h2>
+  <div class="estatisticas-cards">
+    <div class="estatistica-card">🐶 Adotados: 528</div>
+    <div class="estatistica-card">🐾 Não Adotados: 154</div>
+    <div class="estatistica-card">📊 Média de Permanência: 3.2 meses</div>
+    <div class="estatistica-card">🎂 Idade Média: 2.8 anos</div>
+    <div class="estatistica-card">♂️ Machos: 280</div>
+    <div class="estatistica-card">♀️ Fêmeas: 402</div>
+  </div>
+</section>
 
-    <section >
-    <h2>Total Anual de Animais Adotados e Não Adotados</h2>
-      <table>
-        <tr>
-          <th>Tipo de Animal</th>
-          <th>Adotados</th>
-         <th>Não Adotados</th>
-        </tr>
-        <tr><td>Cachorros</td><td>248</td><td>50</td></tr>
-        <tr><td>Gatos</td><td>178</td><td>70</td></tr>
-        <tr><td>Coelhos</td><td>30</td><td>11</td></tr>
-        <tr><td>Aves</td><td>60</td><td>18</td></tr>
-        <tr><td>Outros</td><td>12</td><td>5</td></tr>
-      </table>
-    </section>
-    <br>
-    <section>
-      <h2>Dados Adicionais do Ano</h2>
-      <ul>
-        <li><strong>Total de Animais Adotados:</strong> 528</li>
-        <li><strong>Total de Animais Não Adotados:</strong> 154</li>
-        <li><strong>Média de Permanência:</strong> 3.2 meses</li>
-        <li><strong>Idade Média dos Animais:</strong> 2.8 anos</li>
-        <li><strong>Gênero Masculino:</strong> 280</li>
-        <li><strong>Gênero Feminino:</strong> 402</li>
-      </ul>
-    </section>
-    </div>
-
-    
-  </header>
-
-    <!-- .............................................................................-->
+<h2>Visualização em Gráficos</h2>
+<canvas id="graficoAdocoes"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('graficoAdocoes').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Cachorros', 'Gatos', 'Coelhos', 'Aves', 'Outros'],
+      datasets: [{
+        label: 'Adotados',
+        data: [248, 178, 30, 60, 12],
+        backgroundColor: '#7c5eb3'
+      }, {
+        label: 'Não Adotados',
+        data: [50, 70, 11, 18, 5],
+        backgroundColor: '#cbb5f9'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'bottom' }
+      }
+    }
+  });
+</script>
+<!-- .............................................................................-->
 
   <!-- Rodapé -->
   <footer>
