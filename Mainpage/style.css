@@ -15,29 +15,57 @@ body {
 }
 
 /* ===== CABEÇALHO ===== */
-.top-bar {
-  background-color: #ffffff;
-  color: rgb(255, 255, 255);
-  padding:20px;
+/* Novo cabeçalho */
+header {
+display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background-color: #7c5eb3;
+  padding: 15px 40px;
+}
+
+header img {
+  height: 90px;
+  width: 90px;
+}
+
+header .menu-bar {
+   justify-self: center;
   display: flex;
-  justify-content: normal;
-  align-items: center;
+  gap: 25px;
 }
 
 
-.center img {
-  height: 70px;
-  width:  70px;
-  align-items: center;
-  justify-content: center;
+header .menu-bar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
-.right input {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  width: 200px;
+header .menu-bar a:hover {
+  background: rgba(255, 255, 255, 0.2); /* leve efeito no hover */
 }
+
+header .search-box input {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 35px 8px 10px;
+  justify-self: end;
+}
+
+header .search-box input::placeholder {
+  color: #f0f0f0;
+}
+
+header .search-box i {
+  color: white;
+}
+
 
 /* ---------------------------------------------------------------------------------- */
 
@@ -62,10 +90,13 @@ body {
 
 .search-box {
   position: absolute;
-  top: 20px;   /* distância do topo */
+  top: 45px;   /* distância do topo */
   right: 20px; /* distância da direita */
 }
+
 /* ---------------------------------------------------------------------------------- */
+
+
 /* Menu de navegação */
 .menu-bar {
   background-color: #7c5eb3;
